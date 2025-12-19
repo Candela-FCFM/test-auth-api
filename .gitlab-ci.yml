@@ -12,5 +12,5 @@ build-publish:
   image:
     name: quay.io/buildah/stable:latest
   script:
-    - echo "hello world" 
+    - echo "hello world world" 
 
