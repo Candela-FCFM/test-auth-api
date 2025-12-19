@@ -1,0 +1,16 @@
+stages:
+  - build 
+  - test
+  - publish 
+
+.build:server:
+  tags: [build,kubernetes,orq-cluster,local]
+
+build-publish:
+  stage: build
+  tags: !reference [".build:server", "tags"]
+  image:
+    name: quay.io/buildah/stable:latest
+  script:
+    - echo "hello world" 
+
